@@ -3,13 +3,22 @@ Craft CMS Changelog
 
 ## 2.6.2995 (WIP)
 
+### Added
+- Added `UserPermissionsService::getAssignablePermissions()`.
+
+### Changed
+- Users are no longer allowed to grant new permissions to user accounts that they don’t already have. ([#915](https://github.com/craftcms/cms/issues/915))
+
+### Fixed
+- Fixed a bug where `DateTimeHelper::wasYesterday()` was returning whether the timestamp was yesterday _in UTC_ rather than in the system time zone. ([#2086](https://github.com/craftcms/cms/issues/2086))
+
 ## 2.6.2994 - 2017-10-31
 
 ### Added
 - Added `HttpRequestService::isSingleActionRequest()`.
 
 ### Changed
-- Updated Imagine to 0.7.1.3, which now preserves image IPTC data when preserving EXIF data.
+- Updated Imagine to 0.7.1.3, which now preserves image IPTC data when preserving EXIF data. ([#2034](https://github.com/craftcms/cms/issues/2034))
 
 ### Fixed
 - Fixed a bug where it was possible for logged-out users to access offline sites.
